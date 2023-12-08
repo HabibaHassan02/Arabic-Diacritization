@@ -160,10 +160,9 @@ cython_debug/
 #.idea/
 
 
-#dataset
+#dataset and any .txt files
 dataset.zip
-train.txt
-val.txt
+*.txt
 
 #Habiba's trial test notebook
 trial.ipynb
