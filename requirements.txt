@@ -2,3 +2,6 @@ numpy
 pyarabic
 nltk
 tensorflow
+transformers
+-q
+torch
