@@ -36,12 +36,16 @@ Initialization: It's initialized with a key-value pair where keys are characters
 Default Value: If a key is not found, it returns 0
 '''
 ENCODE_LETTERS_LOOKUP = tf.lookup.StaticHashTable(
-        tf.lookup.KeyValueTensorInitializer(tf.constant(SORTED_VALID_INPUT_LETTERS), tf.range(1, len(SORTED_VALID_INPUT_LETTERS)+1)), default_value= 0
+        tf.lookup.KeyValueTensorInitializer(tf.constant(SORTED_VALID_INPUT_LETTERS), 
+                                            tf.range(1, len(SORTED_VALID_INPUT_LETTERS)+1)), 
+                                            default_value= 0
 )
 # Note that we should check using regex on the 0-9 digits not only 0
 # decode the same way, and default is a (*) which is similar to symbol in paper
 DECODE_LETTERS_TABLE = tf.lookup.StaticHashTable(
-        tf.lookup.KeyValueTensorInitializer(tf.range(1, len(SORTED_VALID_INPUT_LETTERS)+1), tf.constant(SORTED_VALID_INPUT_LETTERS)), '*'
+        tf.lookup.KeyValueTensorInitializer(tf.range(1, len(SORTED_VALID_INPUT_LETTERS)+1), 
+                                            tf.constant(SORTED_VALID_INPUT_LETTERS)), 
+                                            default_value= '*'
 )
 
 
