@@ -125,7 +125,19 @@ DECODE_SUKOON_LOOKUP = tf.lookup.StaticHashTable(
 )
 
 
+def encodeShaddaList(shadda_list):
+    encoded_shadda_list=list()
+    for sentence in shadda_list:
+        list_shadda_encoded=[1 if char==SHADDA else 0 for char in sentence]
+        encoded_shadda_list.append(list_shadda_encoded)
+    return encoded_shadda_list
 
+def encodeSukoonList(sukoon_list):
+    encoded_sukoon_list=list()
+    for sentence in sukoon_list:
+        list_sukoon_encoded=[1 if char==SUKOON else 0 for char in sentence]
+        encoded_sukoon_list.append(list_sukoon_encoded)
+    return encoded_sukoon_list
 
 
 ######################################################################################################
