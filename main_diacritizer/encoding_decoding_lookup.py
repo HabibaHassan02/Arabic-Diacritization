@@ -95,6 +95,21 @@ ENCODE_BINARY_LOOKUP = tf.lookup.StaticHashTable(
                                         default_value= 1
 )
 
+
+# NEWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW------------------------------------------
+# ENCODE_SHADDA_LOOKUP = tf.lookup.StaticHashTable(
+#     tf.lookup.KeyValueTensorInitializer(tf.constant(SHADDA),
+#                                         tf.constant([1])), 
+#                                         default_value= 0
+# )
+
+# ENCODE_SUKKUN_LOOKUP = tf.lookup.StaticHashTable(
+#     tf.lookup.KeyValueTensorInitializer(tf.constant(SUKOON),
+#                                         tf.constant([1])), 
+#                                         default_value= 0
+# )
+#-----------------------------------------------------------------------------
+
 # 4. Shadda  table  - Decoding:
 DECODE_SHADDA_LOOKUP = tf.lookup.StaticHashTable(
     tf.lookup.KeyValueTensorInitializer(tf.constant([0]), 
