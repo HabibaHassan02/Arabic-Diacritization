@@ -164,6 +164,7 @@ cython_debug/
 #dataset and any .txt files
 dataset.zip
 *.txt
+*.csv
 !requirements.txt
 
 #Habiba's trial test notebook
